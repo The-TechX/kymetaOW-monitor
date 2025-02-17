@@ -38,6 +38,31 @@ ip rule list         # Muestra todas las reglas de ruteo
 ip route show table rt_eth0   # Muestra la tabla de rutas personalizada
 ```
 
+
+
+Para instalar paquetes con apt utilizando una interfaz de red específica en Linux, puedes usar ip route o network namespaces. Aquí te dejo varias opciones:
+
+Opción 1: Usar ip route con apt
+Si solo quieres que el tráfico de apt salga por una interfaz específica (ejemplo: eth0 con gateway 192.168.10.1), puedes forzar la ruta temporalmente con:
+
+bash
+Copiar
+Editar
+sudo ip route add default via 192.168.10.1 dev eth0 table 100
+sudo ip rule add iif lo table 100
+Luego instala con:
+
+bash
+Copiar
+Editar
+sudo apt update && sudo apt install <paquete>
+Cuando termines, elimina la regla con:
+
+bash
+Copiar
+Editar
+sudo ip rule del iif lo table 100
+sudo ip route del default via 192.168.10.1 dev eth0 table 100
 Explicación: Estos comandos permiten revisar que la configuración se haya aplicado correctamente.
 
 Nota
