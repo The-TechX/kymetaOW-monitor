@@ -6,10 +6,10 @@ Esta configuración permite que el tráfico con origen en 192.168.10.30 utilice 
 1. Crear una Tabla de Rutas Personalizada
 Edita el archivo /etc/iproute2/rt_tables y añade la siguiente línea:
 
-bash
-Copiar
-Editar
+```bash
+
 200 rt_eth0
+```
 Explicación: Esto asigna la tabla de rutas rt_eth0 con prioridad 200.
 
 2. Agregar la Ruta por Defecto a la Tabla Personalizada
