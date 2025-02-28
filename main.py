@@ -1,5 +1,12 @@
 from oneweb.api_client import AntennaAPIClient
 import asyncio
+import logging
+
+# Configuracin del logging
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s [%(levelname)s] %(name)s - %(message)s"
+)
 
 new_client = AntennaAPIClient(ip_address="192.168.0.1")
 
@@ -7,8 +14,6 @@ new_client = AntennaAPIClient(ip_address="192.168.0.1")
 antennas = [
     "172.25.105.1",
     "172.25.105.2",
-    "172.26.196.129", #pass: VES@V1a5atL30
-    "172.26.196.130", #pass: VES@V1a5atL30
 
 ]
 
@@ -16,8 +21,6 @@ antennas = [
 antenna_tags = {
     "ACH435K230324569": "VES-MX-KYM01",
     "ACH0000W23352514": "VES-MX-KYM02",
-    "ACH0000W23433240": "VES-TO-ENA-KYM01",
-    "ACH0000W23463544": "VES-TO-ENA-KYM02",
 
 }
 
@@ -31,9 +34,12 @@ endpoints = [
 ]
 
 
-async def tarea_externa(instance):  # Función que usa solo los atributos iniciales
+async def tarea_externa(instance):  # Funcin que usa solo los atributos iniciales
     data = {endpoint: await instance.aio_fetch(endpoint) for endpoint in endpoints}
-    print("hello")
+    lat = round(data["status/position"].get("latitude"), 6)
+    lon = round(data["status/position"].get("longitude"), 6)
+    
+    logging.info(f"Antenna {instance.ip_address} -> {lat}, {lon}")
     await asyncio.sleep(5)
     return data
         
