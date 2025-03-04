@@ -1,5 +1,24 @@
 # kymetaOW-monitor
 
+Node.js 23.x:
+
+Using Ubuntu (Node.js 23)
+Before you begin, ensure that curl is installed on your system. If curl is not installed, you can install it using the following command:
+
+sudo apt-get install -y curl
+Download the setup script:
+
+curl -fsSL https://deb.nodesource.com/setup_23.x -o nodesource_setup.sh
+Run the setup script with sudo:
+
+sudo -E bash nodesource_setup.sh
+Install Node.js:
+
+sudo apt-get install -y nodejs
+Verify the installation:
+
+node -v
+
 Ruteo Basado en Políticas en Raspberry Pi
 Esta configuración permite que el tráfico con origen en 192.168.10.30 utilice una tabla de rutas personalizada para salir por la puerta de enlace 192.168.10.1.
 
