@@ -1,0 +1,73 @@
+
+{"antennas": [
+    {
+    "IP": "172.25.105.4",
+    "SiteID": "VES-BORR-HILD",
+    "Customer": "Borr",
+    "SiteName": "Hild",
+    "DeviceID": "VES-BORR-HILD-KYM01",
+    "Model" : "Peregrine U8",
+    "SN": "ACH435K230324569",
+    "password": "VES@V1a5atL30"
+    },
+    {
+    "IP": "172.25.105.5",
+    "SiteID": "MX-LAB",
+    "Customer": "Borr",
+    "SiteName": "Hild",
+    "DeviceID": "VES-BORR-HILD-KYM02",
+    "Model" : "Peregrine U8",
+    "SN": "ACH0000W23352514",
+    "password": "VES@V1a5atL30"
+    },
+    {
+    "IP": "172.25.251.197",
+    "SiteID": "MV23",
+    "Customer": "Modec",
+    "SiteName": "MV23",
+    "DeviceID": "VES-MV23-KYM01",
+    "Model" : "Peregrine U8",
+    "SN": "ACH0000W23352534",
+    "password": "VES@V1a5atL30"
+    },
+    {
+    "IP": "172.25.251.198",
+    "SiteID": "MV23",
+    "Customer": "Modec",
+    "SiteName": "MV23",
+    "DeviceID": "VES-MV23-KYM02",
+    "Model" : "Peregrine U8",
+    "SN": "ACH0000W23352534",
+    "password": "VES@V1a5atL30"
+    },
+    {
+    "IP": "172.27.93.17",
+    "SiteID": "VENCEDOR",
+    "Customer": "EDM",
+    "SiteName": "VENCEDOR",
+    "DeviceID": "EDM-VENCEDOR-KYM01",
+    "Model" : "Peregrine U8",
+    "SN": "ACH0000W24154465",
+    "password": "2Cfg^Ant"
+    },
+    {
+    "IP": "172.27.93.18",
+    "SiteID": "VENCEDOR",
+    "Customer": "EDM",
+    "SiteName": "VENCEDOR",
+    "DeviceID": "EDM-VENCEDOR-KYM02",
+    "Model" : "Peregrine U8",
+    "SN": "ACH0000W24064047",
+    "password": "2Cfg^Ant"
+    },
+    {
+    "IP": "172.27.221.17",
+    "SiteID": "INTREPID",
+    "Customer": "NPG",
+    "SiteName": "INTREPID",
+    "DeviceID": "NPG-INTREPID-KYM01",
+    "Model" : "Peregrine U8",
+    "SN": "ACH0000W24395745",
+    "password": "VES@V1a5atL30"
+    }    
+]}
